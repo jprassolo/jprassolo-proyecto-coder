@@ -1,6 +1,8 @@
-
+{% extends “admin/main.html” %}
 {% load static %}
-{% extends static 'admin/admin.html' %}
+
+
+{% block contenidoQueCambia %}
   <section>
     <h2>Portfolio - Movimientos</h2>
     <article>
@@ -19,3 +21,4 @@
             </div>
         </div>
     </div>
+{% endblock %}

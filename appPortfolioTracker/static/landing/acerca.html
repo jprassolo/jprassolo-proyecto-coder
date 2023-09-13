@@ -1,29 +1,24 @@
-<html lang="en">
-<head>
-  <title>appPortfolioTracker</title>
-  <meta charset="utf-8" />
-  {% load static %}
-  <link rel="stylesheet" href="{% static '/css/default.css' %}">
-</head>
+{% extends 'landing/template.html' %}
+{% load static %}
 
-<body>
 
-<header>
-  <h1>Portfolio Tracker</h1>
-</header>
-
-<section>
-  <h1>Acerca de mi...</h1>
-  <article>
-    <h2>Hey...</h2>
-    <h3>Esta es mi primer webapp usando django.</h3>
-    <h4>El proyecto aborda una tematica de moda que son las inversiones en la bolsa de valores.</h4>
-    <h4>Puntualmente, nos centraremos en el registro de las compras y ventas para darle seguimiento al portfolio de activos.</h4>
-
-    <h4>Claro que es mas facil usando excel... pero bue... adivina que... el curso es de Python!!</h4>
-  </article>
-  <p style="text-align: right; color: blue;">&copy; 2023 José Enrique Prassolo - CODEHOUSE - Curso Python - Comisión 43880</p>
-</section>
-
-</body>
-</html>
+{% block contenidoQueCambia %}
+  <header class="masthead">
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="text-center text-white">
+                    <!-- Page heading-->
+                      <article style="border-style:double;border-radius: 1px;border-color: black; background-color: cornflowerblue;">
+                        <h4 style="text-align: left;">Hey...</h4>
+                        <p style="text-align: left;">Esta es mi primer webapp usando django.</p>
+                        <p>El proyecto tiene como objetivo mantener un registro de los movimientos de inversiones.
+                        Puntualmente, nos centraremos en el registro de las compras y ventas para darle seguimiento al portfolio de activos.
+                        Claro que es mas facil usando excel... pero bue... adivina que... el curso es de Python!!</p>
+                      </article>
+                </div>
+            </div>
+        </div>
+    </div>
+  </header>
+{% endblock %}

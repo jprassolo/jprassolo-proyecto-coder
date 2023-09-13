@@ -3,11 +3,11 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href="/app/">Home</a>
+                <a class="navbar-brand" href={% url 'index' %}>Home</a>
 <!--                 <a class="navbar-brand" href="/apppt/iportfolios">Portfolios</a>
                 <a class="navbar-brand" href="/apppt/iactivos">Activos</a>
                 <a class="navbar-brand" href="/apppt/ilibros">Libros</a> -->
-                <a class="btn btn-primary" href="/app/main">Login</a>
+                <a class="btn btn-primary" href={% url 'pt' %}>Login</a>
                 <!-- <a class="btn btn-primary" href="#signup">Login</a> -->
             </div>
         </nav>

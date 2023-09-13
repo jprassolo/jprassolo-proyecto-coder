@@ -18,45 +18,26 @@ Including another URLconf
 from django.urls import path
 #
 # importo las views de la app
+from appPortfolioTracker import views
 from appPortfolioTracker.views import iactivos
 from appPortfolioTracker.views import ilibros
 from appPortfolioTracker.views import iportfolios, aportfolios
 from appPortfolioTracker.views import index, acerca, contacto, terminos, politica
-from appPortfolioTracker.views import main
+from appPortfolioTracker.views import pt
 
 
 urlpatterns = [
-    path('', index),            #_ ambas hacen referencia a la misma vista
-    # path('index/', index),      # 
-    path('acerca/', acerca),
-    path('contacto/', contacto),
-    path('terminos/', terminos),
-    path('politica/', politica),
+    path('', views.index, name="index"),  #_ ambas hacen referencia a la misma vista
+    # path('index/', index),            # 
+    path('acerca'   , views.acerca  , name="acerca"),
+    path('contacto' , views.contacto, name="contacto"),
+    path('terminos' , views.terminos, name="terminos"),
+    path('politica  ', views.politica, name="politica"),
 
-    path('main/', main),
+    path('pt', views.pt, name="pt"),
     
-    path('iactivos/', iactivos),
-
-    path('ilibros/', ilibros),
-
-    path('iportfolios/', iportfolios),
-    path('aportfolios/<nombre>/<descripcion>', aportfolios),    
+    path('iactivos'     , views.iactivos, name="iactivos"),
+    path('ilibros'      , views.ilibros, name="ilibros"),
+    path('iportfolios'  , views.iportfolios, name="iportfolios"),
+    path('aportfolios/<nombre>/<descripcion>', views.aportfolios, name="aportfolios"),
 ]
-
-# urlpatterns = [
-#     path('', index),            #_ ambas hacen referencia a la misma vista
-#     path('index/', index, name=index),      # 
-#     path('acerca/', acerca, name=acerca),
-#     path('contacto/', contacto, name=contacto),
-#     path('terminos/', terminos, name=terminos),
-#     path('politica/', politica, name=politica),
-
-#     path('admin', admin, name=admin),
-    
-#     path('iactivos/', iactivos, name=iactivos),
-
-#     path('ilibros/', ilibros, name=ilibros),
-
-#     path('iportfolios/', iportfolios, name=iportfolios),
-#     path('aportfolios/<nombre>/<descripcion>', aportfolios, name=aportfolios),    
-# ]

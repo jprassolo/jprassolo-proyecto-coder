@@ -26,18 +26,17 @@ def politica(request):
 ####################################################################
 ### MAIN PAGE
 ####################################################################
-def main(request):
-    # return render(request,"admin/admin.html")
-    return render(request,"admin/main.html")
+def pt(request):
+    return render(request,"crud/dashboard.html")
 
 ####################################################################
 ### CRUDS
 ####################################################################
 def iactivos(request):
-    return render(request,"pages/activos.html")
+    return render(request,"crud/activos.html")
 
 def iportfolios(request):
-    return render(request,"pages/portfolios.html")
+    return render(request,"crud/portfolios.html")
 
 def aportfolios(request, nombre, descripcion):
     p = Portfolio(nombre=nombre ,descripcion=descripcion)
@@ -47,4 +46,4 @@ def aportfolios(request, nombre, descripcion):
     """)
 
 def ilibros(request):
-    return render(request,"pages/libros.html")
+    return render(request,"crud/libros.html")
