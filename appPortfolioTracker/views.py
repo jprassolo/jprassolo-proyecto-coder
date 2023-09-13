@@ -35,6 +35,12 @@ def pt(request):
 def iactivos(request):
     return render(request,"crud/activos.html")
 
+def icryptos(request):
+    return render(request,"crud/cryptos.html")
+
+def ibonos(request):
+    return render(request,"crud/bonos.html")
+
 def iportfolios(request):
     return render(request,"crud/portfolios.html")
 
