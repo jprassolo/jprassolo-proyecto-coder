@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .graphs import get_graph_for_dashboard, get_graph_for_dashboard2
 from .models import Portfolio, Activos, Libro
 
 # Create your views here.
@@ -26,8 +27,15 @@ def politica(request):
 ####################################################################
 ### MAIN PAGE
 ####################################################################
+def admin(request):
+    return render(request, "admin/")
+    
 def pt(request):
-    return render(request,"crud/dashboard.html")
+    # Get the graph
+    graph = get_graph_for_dashboard2()    
+    # Render the graph to the template
+    return render(request,"crud/dashboard.html", {'graph': graph})
+
 
 ####################################################################
 ### CRUDS

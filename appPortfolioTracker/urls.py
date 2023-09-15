@@ -19,11 +19,11 @@ from django.urls import path
 #
 # importo las views de la app
 from appPortfolioTracker import views
-from appPortfolioTracker.views import iactivos, ibonos, icryptos
+from appPortfolioTracker.views import iactivos,ibonos, icryptos
 from appPortfolioTracker.views import ilibros
 from appPortfolioTracker.views import iportfolios, aportfolios
 from appPortfolioTracker.views import index, acerca, contacto, terminos, politica
-from appPortfolioTracker.views import pt
+from appPortfolioTracker.views import pt, admin
 
 
 urlpatterns = [
@@ -42,4 +42,5 @@ urlpatterns = [
     path('ilibros'      , views.ilibros, name="ilibros"),
     path('iportfolios'  , views.iportfolios, name="iportfolios"),
     path('aportfolios/<nombre>/<descripcion>', views.aportfolios, name="aportfolios"),
+    path('admin', views.admin)
 ]

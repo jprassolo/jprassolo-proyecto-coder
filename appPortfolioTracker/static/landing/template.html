@@ -20,61 +20,14 @@
     </head>
     <body>
         <!-- Navigation-->
-        <nav class="navbar navbar-light bg-light static-top">
-            <div class="container">
-                <a class="navbar-brand" href={% url 'index' %}>Home</a>
-<!--                 <a class="navbar-brand" href="/apppt/iportfolios">Portfolios</a>
-                <a class="navbar-brand" href="/apppt/iactivos">Activos</a>
-                <a class="navbar-brand" href="/apppt/ilibros">Libros</a> -->
-                <a class="btn btn-primary" href={% url 'pt' %}>Login</a>
-                <!-- <a class="btn btn-primary" href="#signup">Login</a> -->
-            </div>
-        </nav>
+        {% include "landing/menu.html" %}
 
+        <!-- Contenido dinamico-->
         {% block contenidoQueCambia %}
 
         {% endblock contenidoQueCambia %}
 
         <!-- Footer-->
-        <footer class="footer bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
-                        <ul class="list-inline mb-2">
-                            <li class="list-inline-item"><a href={% url 'acerca' %}>Acerca de</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href={% url 'contacto' %}>Contacto</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href={% url 'terminos' %}>Terminos de Uso</a></li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item"><a href={% url 'politica' %}>Politica de Privacidad</a></li>
-                        </ul>
-                        <p class="text-muted small mb-4 mb-lg-0">&copy; 2023 José Enrique Prassolo - CODERHOUSE - Curso Python - Comisión 43880.</p>
-                    </div>
-                    <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
-                        <ul class="list-inline mb-0">
-                            <li class="list-inline-item me-4">
-                                <a href="https://www.facebook.com/"><i class="bi-facebook fs-3"></i></a>
-                            </li>
-                            <li class="list-inline-item me-4">
-                                <a href="https://twitter.com/home"><i class="bi-twitter fs-3"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="https://www.instagram.com/"><i class="bi-instagram fs-3"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-        <!-- Core theme JS-->
-        <script src="{% static 'js/landing_scripts.js' %}"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="{% static 'js/sb-forms-latest.js' %}"></script>
+        {% include "landing/footer.html" %}
     </body>
 </html>
